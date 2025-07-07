@@ -3,7 +3,7 @@ import Hero from './assets/Hero';
 import Projects from './projects/Projects';
 import Experience from './experience/Experience';
 import Navbar from './components/Navbar';
-import About from './About/About';
+import About from './about/About';
 import Tech from './techstack/Tech';
 import Footer from './components/Footer';
 
