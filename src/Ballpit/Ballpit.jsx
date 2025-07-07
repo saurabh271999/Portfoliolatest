@@ -483,7 +483,7 @@ class Y extends c {
 }
 
 const X = {
-  count: 100,
+  count: 70,
   colors: [
     0x000000, // ⚫ Black
     0x0000ff  // 🔵 Blue

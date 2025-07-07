@@ -1,19 +1,23 @@
 import React from 'react'
-import Ballpit from './Ballpit/Ballpit'
+import Hero from './assets/Hero'
+import Projects from './projects/Projects'
+import Experience from './experience/Experience'
+import Navbar from './components/Navbar'
+import About from './About/About'
+import Tech from './techstack/Tech'
+import Footer from './components/Footer'
 const Home = () => {
   return (
-    <div>
- <div
-  style={{
-    position: 'relative',
-    width: '100%',
-    height: '100dvh',         // 🔐 Fix height here
-    overflow: 'hidden',      // 🔐 Prevent anything from overflowing
-  }}
->
-  <Ballpit  />
-</div>
-    </div>
+    <main className="relative bg-[#0a0a0a] text-white overflow-hidden">
+     <Navbar/>
+      <Hero />
+      <About/>
+      <Experience />
+      <Projects />
+      <Tech />
+      <Footer />
+      
+    </main>
   )
 }
 
