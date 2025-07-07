@@ -9,6 +9,7 @@ const ContactForm = () => {
 
   return (
     <section
+    id="contact"
       ref={ref}
       className={`relative min-h-screen px-6 py-20 text-white flex flex-col md:flex-row items-center justify-center gap-10
         transition-all duration-1000 ease-in-out overflow-hidden
@@ -57,6 +58,7 @@ const ContactForm = () => {
               className="w-full p-3 rounded bg-[#0f0f1f] text-white outline-none"
             ></textarea>
           </div>
+        
           <button
             type="submit"
             className="bg-purple-600 px-6 py-2 rounded text-white hover:bg-purple-700 transition"
@@ -64,6 +66,7 @@ const ContactForm = () => {
             Send
           </button>
         </form>
+       
       </div>
 
       

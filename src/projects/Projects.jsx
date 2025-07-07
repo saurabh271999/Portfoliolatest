@@ -12,73 +12,82 @@ export default function FeaturesGrid() {
     {
       img: cleartrip,
       name: "Cleartrip",
-      title: "Cleartrip Clone Travel and hotel booking App",
-      desc: "Loved by developers around the world",
+      title: "Travel and Hotel Booking App",
+      desc: "A responsive UI clone of Cleartrip built with React and Tailwind CSS.",
+      link: "https://mytripapp.netlify.app/",
     },
     {
       img: lifelinkr,
       name: "Lifelinkr",
-      title: "Medical and Doctor App",
-      desc: "Growing weekly & only getting better",
+      title: "Medical and Doctor Appointment App",
+      desc: "A complete healthcare app interface with appointment booking flow.",
+      link: "https://lifelinker-landing-page-ao2z2att4-saurabh271999s-projects.vercel.app/",
     },
     {
       img: cashify,
       name: "Cashify",
-      title: "Phone Selling App",
-      desc: "Sell old phones at best price instantly",
+      title: "Phone Selling Platform",
+      desc: "Sell your old phones instantly. React + Express + MongoDB based full stack project.",
+      link: "https://buyeasymobile.netlify.app/",
     },
     {
       img: redCafe,
       name: "RedCafe",
-      title: "Restaurant App",
-      desc: "A beautiful UI for a food ordering app",
+      title: "Restaurant UI App",
+      desc: "A modern, minimal food ordering UI built for learning animations and layout.",
+      link: "https://redcafee.netlify.app/",
     },
     {
       img: Alarm,
       name: "Alarm Clock",
-      title: "JavaScript Alarm Clock",
-      desc: "Functional JS-based alarm clock",
+      title: "Vanilla JS Alarm Clock",
+      desc: "A functional digital clock made with pure JavaScript and local time syncing.",
+      link: "https://your-alarmclock-demo-link.com",
     },
   ];
 
   return (
-    <section className="bg-gradient-to-b from-[#0a0a0a] to-[#1c1c1c] py-20 px-6 sm:px-12 ">
-      <span className=" text-purple-400 mb-10 sm:text-5xl ml-5 font-extrabold">
-        projects
-      </span>
-      <p className="text-gray-300 text-start leading-relaxed mb-10 mt-5">
-        Here are some of the projects I've worked on, each built from scratch to <br />
-        solve real-world problems and demonstrate my skills across the full <br />
-        development stack. These projects reflect not just my technical <br />
-        knowledge, but also my passion for coding, designing scalable systems, <br />
-        and building user-friendly applications. From frontend design to backend <br />
-        logic and database integration — every project showcases my journey as a <br />
-        full-stack web developer.
+    <section id="projects" className="bg-gradient-to-b from-[#0a0a0a] to-[#1c1c1c] py-20 px-6 sm:px-12">
+      <h2 className="text-4xl sm:text-5xl font-extrabold text-purple-400 mb-4 ml-2">
+        Projects
+      </h2>
+
+      <p className="text-gray-300 leading-relaxed max-w-4xl ml-2 mb-10">
+        Here are some of the projects I've worked on, each built from scratch to solve real-world problems and demonstrate my skills across the full development stack.
+        These projects reflect not just my technical knowledge, but also my passion for coding, designing scalable systems, and building user-friendly applications.
+        From frontend design to backend logic and database integration — every project showcases my journey as a full-stack web developer.
       </p>
 
-      <div className="max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {features.map((item, i) => (
-          <motion.div
+          <motion.a
             key={i}
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: i * 0.2 }}
-            className="bg-[#13121a] text-white rounded-xl p-6 shadow-md hover:scale-[1.02] transition-transform duration-300"
+            className="bg-[#13121a] text-white rounded-xl p-6 shadow-md hover:scale-[1.02] transition-transform duration-300 hover:shadow-purple-500/20"
           >
             <img
-            loading="lazy"
+              loading="lazy"
               src={item.img}
               alt={item.name}
-              className="rounded w-full h-30 object-cover mb-4"
+              className="rounded w-full h-36 object-cover mb-4"
             />
-            <h2 className="text-2xl font-extrabold text-purple-500 mb-2">
+            <h2 className="text-xl font-bold text-purple-500 mb-2">
               {item.name}
             </h2>
-            <h3 className="text-[15px] font-semibold mb-1">{item.title}</h3>
-            <p className="text-gray-400 text-sm">{item.desc}</p>
-            <span className="block flex gap-2 text-[10px]"><p className="text-blue-700">#React</p><p className="text-green-600">#Mongo</p><p className="text-pink-400">#tailwind</p></span>
-          </motion.div>
+            <h3 className="text-sm font-semibold mb-1">{item.title}</h3>
+            <p className="text-gray-400 text-sm mb-2">{item.desc}</p>
+            <span className="flex flex-wrap gap-2 text-xs mt-2">
+              <span className="text-blue-500">#React</span>
+              <span className="text-green-400">#MongoDB</span>
+              <span className="text-pink-400">#Tailwind</span>
+            </span>
+          </motion.a>
         ))}
       </div>
     </section>

@@ -16,7 +16,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section className="bg-gradient-to-b from-[#0a0a0a] to-[#1c1c1c] py-20 px-6 text-white">
+    <section id="tech" className="bg-gradient-to-b from-[#0a0a0a] to-[#1c1c1c] py-20 px-6 text-white">
       <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">Tech Stack</h2>
       <div className="flex flex-wrap justify-center gap-6">
         {skills.map((icon, index) => (

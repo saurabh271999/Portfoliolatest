@@ -29,7 +29,7 @@ const experiences = [
 
 export default function ExperienceTimeline() {
   return (
-    <section className="bg-gradient-to-b from-[#0a0a0a] to-[#1c1c1c] text-white py-16 px-4">
+    <section id="experience" className="bg-gradient-to-b from-[#0a0a0a] to-[#1c1c1c] text-white py-16 px-4">
       <h2 className="text-4xl font-bold text-center mb-16">Education</h2>
       <div className="relative max-w-6xl mx-auto">
         {/* Vertical Line */}
